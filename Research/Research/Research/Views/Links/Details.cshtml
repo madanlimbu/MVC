@@ -1,0 +1,35 @@
+﻿@model Research.Models.Links
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_ULayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Links</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ChairWebsite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChairWebsite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoChairWebsite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoChairWebsite)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LinksID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Research.Models.User>
+@{
+    ViewBag.Title = "SearchLink";
+    Layout = "~/Views/Shared/_ULayout.cshtml";
+}
+
+<h2>Search User Name </h2>
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@using (Ajax.BeginForm("Search", "Users", new AjaxOptions
+{
+
+    UpdateTargetId = "SearchResults",
+    HttpMethod = "GET",
+    InsertionMode = InsertionMode.Replace
+}))
+
+{
+
+    <div class="topcorner">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" id="Searchbtn" />
+    </div>
+}
+
+<div id="SearchResults">
+
+</div>
+<!--
+<div>
+    @Html.Partial("_UserList")
+</div>
+    -->
+

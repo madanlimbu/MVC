@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Research.Models.User>
+<div id="SearchResults">
+    <ul class="ListView">
+        @foreach (var item in Model)
+        {
+            <li>
+               Name :@Html.DisplayFor(modelItem => item.Name)<br />
+               Email : @Html.DisplayFor(modelItem => item.Email)<br />
+               Date Of Birth : @Html.DisplayFor(modelItem => item.DateOfBirth)<br />
+               Gender : @Html.DisplayFor(modelItem => item.Gender)<br />
+               Address : @Html.DisplayFor(modelItem => item.Address)<br />
+               Home Number : @Html.DisplayFor(modelItem => item.Home_Number)<br />
+               Mobile Number : @Html.DisplayFor(modelItem => item.Mobile_Number)<br />
+               Work Number : @Html.DisplayFor(modelItem => item.Work_Number)<br />
+               Work Location : @Html.DisplayFor(modelItem => item.Work_Location)<br />
+               Biography :  @Html.DisplayFor(modelItem => item.Biography)<br />
+            </li>
+        }
+    </ul>
+</div>
+

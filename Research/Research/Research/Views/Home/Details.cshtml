@@ -1,0 +1,54 @@
+﻿@model Research.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventName)
+
+        </dd>
+
+    </dl>
+    <table class="table">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Users.ToList())
+        {
+            <tr>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserID)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
+<p>
+     @Html.ActionLink("Back to List", "Events", "Home")
+</p>

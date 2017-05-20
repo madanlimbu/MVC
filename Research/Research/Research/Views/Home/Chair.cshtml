@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Research.Models.Links>
+
+@{
+    ViewBag.Title = "Chair";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chair</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ChairWebsite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoChairWebsite)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           @Html.ActionLink("Chair", "ChairLink", new { id = item.LinksID })  
+        </td>
+        <td>
+          @Html.ActionLink("Co-Chair", "CoChairLink", new { id = item.LinksID })
+        </td>
+    </tr>
+}
+
+</table>

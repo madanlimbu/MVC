@@ -1,0 +1,17 @@
+﻿@model Research.Models.User
+
+@{
+    ViewBag.Title = "AddUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddUser</h2>
+<div>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary();
+    <p>User Name: @Html.TextBoxFor(x=>x.Name)</p>
+    <input type="submit" value="Submit User"/>
+}
+</div>
+

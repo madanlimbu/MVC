@@ -1,0 +1,27 @@
+﻿@model Research.Models.About
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_ULayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>About</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AboutID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
